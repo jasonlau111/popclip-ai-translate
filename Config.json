@@ -1,0 +1,31 @@
+{
+  "identifier": "com.sinian.ai-translate",
+  "popclip version": 4586,
+  "name": "AI翻译",
+  "icon": "symbol:globe",
+  "javascript file": "translate.js",
+  "entitlements": [
+    "network"
+  ],
+  "after": "show-result",
+  "description": "使用 AI 翻译选中的文字",
+  "options": [
+    {
+      "identifier": "apiBase",
+      "type": "string",
+      "label": "API 地址",
+      "defaultValue": "https://api.openai.com/v1"
+    },
+    {
+      "identifier": "apiKey",
+      "type": "password",
+      "label": "API 密钥"
+    },
+    {
+      "identifier": "model",
+      "type": "string",
+      "label": "模型名称",
+      "defaultValue": "gpt-4o-mini"
+    }
+  ]
+}
