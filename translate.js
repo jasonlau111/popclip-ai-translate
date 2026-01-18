@@ -2,10 +2,16 @@
 const axios = require("axios");
 
 // 获取设置
-const apiBase = popclip.options.apiBase || "https://api.openai.com/v1";
-const apiKey = popclip.options.apiKey || "";
-const model = popclip.options.model || "gpt-4o-mini";
+const options = popclip.options;
+const apiBase = options.apiBase || "https://api.openai.com/v1";
+const apiKey = options.apiKey || "";
+const model = options.model || "gpt-4o-mini";
 const text = popclip.input.text;
+
+// 检查必填项
+if (!apiKey) {
+    throw new Error("请先在设置中填写 API 密钥");
+}
 
 // 系统提示词
 const systemPrompt = "你是一个专业翻译。将内容翻译成简体中文。专业术语保留英文原文。只输出译文。";

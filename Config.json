@@ -14,18 +14,18 @@
       "identifier": "apiBase",
       "type": "string",
       "label": "API 地址",
-      "defaultValue": "https://api.openai.com/v1"
+      "default value": "https://api.openai.com/v1"
     },
     {
       "identifier": "apiKey",
-      "type": "password",
+      "type": "string",
       "label": "API 密钥"
     },
     {
       "identifier": "model",
       "type": "string",
       "label": "模型名称",
-      "defaultValue": "gpt-4o-mini"
+      "default value": "gpt-4o-mini"
     }
   ]
 }
